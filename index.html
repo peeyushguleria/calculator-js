@@ -1,89 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<style>
-		div{
-			margin-top: 16px;
-		}
-	</style>
-</head>
-<body>
-	<p>Calculator</p>
-	<div>
-		<button onclick=" calculations+='1';
-		console.log(calculations);
-		">1</button>
-		<button onclick=" calculations+='2';
-		console.log(calculations);
-		" >2</button>
-		<button onclick=" calculations+='3';
-		console.log(calculations);
-		">3</button>
-		<button onclick=" calculations+=' + ';
-		console.log(calculations)
-		
-		"
-
-		>+</button>
-	</div>
-	<div>
-		<button onclick=" calculations+='4';
-		console.log(calculations);
-		">4</button>
-		<button onclick=" calculations+='5';
-		console.log(calculations);
-		">5</button>
-		<button onclick=" calculations+='6';
-		console.log(calculations);
-		">6</button>
-		<button onclick=" calculations+=' - ';
-		console.log(calculations)
-		
-		">-</button>
-	</div>
-	<div>
-		<button onclick=" calculations+='7';
-		console.log(calculations);
-		">7</button>
-		<button onclick=" calculations+='8';
-		console.log(calculations);
-		">8</button>
-		<button onclick=" calculations+='9';
-		console.log(calculations);
-		">9</button>
-		<button onclick=" calculations+=' * ';
-		console.log(calculations)
-		
-		">*</button>
-	</div>
-	<div>
-		<button onclick=" calculations+='0';
-		console.log(calculations);
-		">0</button>
-		<button onclick=" calculations+='.';
-		console.log(calculations);
-		">.</button>
-		<button onclick=" calculations=eval(calculations);
-		console.log(`Answer: ${calculations}`)
-		
-		">=</button>
-		<button onclick=" calculations+=' / ';
-		console.log(calculations)
-		
-		">/</button>
-	</div>
-	<div>
-		<button onclick=" calculations='';
-		console.log(`Everything is cleared. ${calculations}`);
-		">Clear</button>
-	</div>
-	<script>
-
-		let calculations = '';
-	</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="Calculation('1')">1</button>
+      <button onclick="Calculation('2')">2</button>
+      <button onclick="Calculation('3')">3</button>
+      <button onclick="Calculation('+')">+</button>
+    </p>
+    <p>
+      <button onclick="Calculation('4')">4</button>
+      <button onclick="Calculation('5')">5</button>
+      <button onclick="Calculation('6')">6</button>
+      <button onclick="Calculation('-')">-</button>
+    </p>
+    <p>
+      <button onclick="Calculation('7')">7</button>
+      <button onclick="Calculation('8')">8</button>
+      <button onclick="Calculation('9')">9</button>
+      <button onclick="Calculation('*')">*</button>
+    </p>
+    <p>
+      <button onclick="Calculation('0')">0</button>
+      <button onclick="Calculation('.')">.</button>
+      <button onclick="
+	  calculation=eval(calculation);
+	  console.log(`Answer is ${calculation}`);
+	  
+	  ">=</button>
+      <button onclick="Calculation('/')">/</button>
+    </p>
+    <button onclick=" calculation='';
+	console.log(`Everything is cleared`)
+	" 
+	>Clear</button>
+    <script>
+      let calculation = "";
+      function Calculation(value) {
+        calculation += value;
+        console.log(calculation);
+      }
+    </script>
+  </body>
 </html>
